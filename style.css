@@ -6,13 +6,6 @@
     --mint: #48D1CC;
     --blue: #4169E0;
     --shadow: #4682B4;
-
-    /* --line-mixin: {
-        height: 0;
-        border-top: 2px solid var(--light-grey);
-        opacity: 0.5;
-        margin: 1em 0;
-    } */
 }
 
 * {
@@ -55,12 +48,38 @@ html, body {
 }
 
 .calendar__header_line {
-    /* @apply --line-mixin; */
     height: 0;
     border-top: 2px solid var(--light-grey);
     opacity: 0.5;
     margin: 1em 0;
 }
+
+
+
+
+.calendar__body {
+    flex-direction: column;
+}
+.calendar__body_weekday {
+    margin: 0.5em 0;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.calendar__body_weekday_cell {
+    width: 34px;
+    margin: 0.5em 0;
+    justify-content: center;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.week {
+    font-weight: 700;
+}
+
 
 
 .calendar__footer {
