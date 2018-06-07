@@ -27,7 +27,7 @@ html, body {
 
 .calendar {
     width: 300px;
-    height: 300px;
+    height: 500px;
     background: linear-gradient(135deg, var(--milk), var(--light-grey));
     box-shadow: 0 0 3em var(--shadow);
     flex-direction: column;
@@ -60,6 +60,7 @@ html, body {
 .calendar__body {
     flex-direction: column;
 }
+
 .calendar__body_weekday {
     margin: 0.5em 0;
     flex-direction: row;
@@ -69,15 +70,34 @@ html, body {
 }
 
 .calendar__body_weekday_cell {
-    width: 34px;
-    margin: 0.5em 0;
+    width: 3em;
+    height: 3em;
     justify-content: center;
+    align-items: center;
     font-size: 0.75em;
     text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.calendar__body_weekday_cell:hover {
+    box-shadow: 0 0 0 var(--orange);
+    background: var(--orange);
+    color: #fff;
+    font-weight: 700;
 }
 
 .week {
     font-weight: 700;
+}
+
+.another {
+    width: 3em;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    color: var(--dark-grey);
+    opacity: 0.3;
 }
 
 
@@ -92,7 +112,6 @@ html, body {
 }
 
 .calendar__footer_line {
-    /* @apply --line-mixin; */
     height: 0;
     border-top: 2px solid var(--light-grey);
     opacity: 0.5;
